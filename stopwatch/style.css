@@ -1,5 +1,17 @@
+/* Define color variables */
+:root {
+ --background-color: #c3b9c1;
+ --main-color: #f92672;
+ --text-shadow-color: #f8a5c2;
+ --button-hover-color: #f44583;
+ --button-box-shadow-color: rgba(0, 0, 0, 0.5);
+ --button-box-shadow-hover-color: rgba(0, 0, 0, 0.7);
+ --disabled-opacity: 0.5;
+}
+
+/* Body Styles */
 body {
- background-color: #c3b9c1;
+ background-color: var(--background-color);
  font-family: "Poppins", sans-serif;
  display: flex;
  flex-direction: column;
@@ -9,23 +21,26 @@ body {
  align-items: center;
 }
 
+/* Timer Styles */
 #timer {
  font-size: 7rem;
  font-weight: 700;
- text-shadow: 2px 2px #f8a5c2;
- color: #f92672;
+ text-shadow: 2px 2px var(--text-shadow-color);
+ color: var(--main-color);
  width: 600px;
  text-align: center;
  margin: 40px auto;
 }
 
+/* Buttons Container Styles */
 #buttons {
  display: flex;
  justify-content: center;
 }
 
+/* Button Styles */
 button {
- background-color: #f92672;
+ background-color: var(--main-color);
  color: white;
  border: none;
  font-size: 2rem;
@@ -38,16 +53,19 @@ button {
  transition: all 0.2s;
 }
 
+/* Button Hover Styles */
 button:hover {
- background-color: #f44583;
- box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+ background-color: var(--button-hover-color);
+ box-shadow: 2px 2px 10px var(--button-box-shadow-hover-color);
 }
 
+/* Disabled Button Styles */
 button[disabled] {
- opacity: 0.5;
+ opacity: var(--disabled-opacity);
  cursor: default;
 }
 
+/* Responsive Styles */
 @media (max-width: 800px) {
  #timer {
   font-size: 4rem;
